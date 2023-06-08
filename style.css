@@ -1,0 +1,244 @@
+:root {
+    --font-color: #c9c9c9;
+    --bg: #3322ff;
+}
+* {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+}
+header {
+    background: var(--bg);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    color: var(--font-color);
+    cursor: pointer;
+}
+.logo-area span{
+    font-size: 1.4rem;
+}
+
+header nav img {
+    width: 50px;
+}
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--font-color);
+    transition: .5s all ease;
+}
+
+.menu li a:hover {
+    background: var(--font-color);
+    color: var(--bg);
+}
+
+
+
+/* Main */
+
+main {
+    padding: 0 50px;
+}
+.course-more-purchased {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 140px;
+}
+.more-purchased-title{
+    font-size: 2.5rem;
+    margin: 10px 0px;
+    color: var(--bg);
+}
+
+.more-purchased-img {
+    max-height: 400px;
+    object-fit: cover;
+    flex: 1;
+    transition: .5s all ease;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+.more-purchased-img:hover {
+    border: 2px solid #3322ff;
+    cursor: pointer;
+}
+
+.more-purchased-content {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0px;
+    color: var(--bg);
+}
+
+/* main-courses */
+.bar {
+    width: 150px;
+    height: 4px;
+    background-color: var(--bg);
+    margin: 5px 0px;
+}
+.courses {
+    margin: 40px 0px;
+}
+
+.courses h2 {
+    color: var(--bg);
+}
+
+.courses-area {
+    margin: 30px 0px;
+    display: flex;
+    gap: 1rem;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.courses-area article{
+    width: 18%;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    color: var(--bg);
+    border: 1px solid transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: .5s all ease;
+}
+.courses-area article:hover {
+    background: var(--bg);
+    border: 1px solid var(--bg);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.courses-area article img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.courses-area article p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 5px 0px;
+
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--bg);
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .5rem;
+}
+
+footer a {
+    padding: 3px;
+    border-radius: 5px;
+    transition: .5s all ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a:hover {
+    background-color: var(--font-color);
+}
+
+.social-img {
+    width: 30px;
+}
+
+.footer-content {
+    text-align: center;
+    font-size: .9rem;
+
+    color: var(--font-color);
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .course-more-purchased {
+        padding: 0;
+    }
+    .more-purchased-title {
+        font-size: 1.5rem;
+    }
+    .more-purchased-content {
+        font-size: 1rem;
+    }
+
+    .menu {
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        
+    }
+
+    .courses-area article:nth-child(5) {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        padding: 15px 25px;
+    }
+    main {
+        padding: 0 25px;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .courses-area article {
+        width: 100%;
+    }
+
+    .courses-area article img {
+        object-fit: cover;
+        height: auto;
+        min-height: 200px;
+        max-height: 300px;
+    }
+}
