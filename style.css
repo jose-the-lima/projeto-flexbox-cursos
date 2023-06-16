@@ -1,14 +1,20 @@
 :root {
-    --font-color: #c9c9c9;
-    --bg: #3322ff;
+    --bg: #00ff00;
+    --bg-main: #141414;
+    --bg-secondary: #000000;
 }
 * {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0px;
 }
+
+body {
+    background: var(--bg-main);
+}
+
 header {
-    background: var(--bg);
+    background: var(--bg-secondary);
 }
 nav {
     display: flex;
@@ -20,7 +26,7 @@ nav {
     display: flex;
     align-items: center;
     gap: .8rem;
-    color: var(--font-color);
+    color: var(--bg);
     cursor: pointer;
 }
 .logo-area span{
@@ -29,6 +35,9 @@ nav {
 
 header nav img {
     width: 50px;
+    background: #00ff00;
+    padding: 0px 5px;
+    border-radius: 7px;
 }
 .menu {
     display: flex;
@@ -38,13 +47,13 @@ header nav img {
 .menu li a {
     padding: 10px 15px;
     text-decoration: none;
-    color: var(--font-color);
+    color: var(--bg);
     transition: .5s all ease;
 }
 
 .menu li a:hover {
-    background: var(--font-color);
-    color: var(--bg);
+    background: var(--bg);
+    color: var(--bg-secondary);
 }
 
 
@@ -74,7 +83,7 @@ main {
     border-radius: 10px;
 }
 .more-purchased-img:hover {
-    border: 2px solid #3322ff;
+    border: 2px solid var(--bg);
     cursor: pointer;
 }
 
@@ -126,8 +135,9 @@ main {
 .courses-area article:hover {
     background: var(--bg);
     border: 1px solid var(--bg);
-    color: var(--font-color);
+    color: var(--bg-secondary);
     cursor: pointer;
+    transform: scale(1.2)
 }
 
 .courses-area article img{
@@ -149,7 +159,7 @@ main {
 /* Footer */
 
 footer {
-    background-color: var(--bg);
+    background-color: var(--bg-secondary);
     height: 6rem;
     display: flex;
     flex-direction: column;
@@ -167,15 +177,29 @@ footer {
 footer a {
     padding: 3px;
     border-radius: 5px;
-    transition: .5s all ease;
+    transition: .2s all ease;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: var(--bg);
 }
 
 footer a:hover {
-    background-color: var(--font-color);
+    margin-top: -20px;
+}
+
+footer a:nth-child(1):hover {
+    background-color: darkcyan;
+}
+
+footer a:nth-child(2):hover {
+    background-color: #ffffff;
+}
+
+footer a:nth-child(3):hover {
+    background-color: violet;
 }
 
 .social-img {
@@ -186,7 +210,7 @@ footer a:hover {
     text-align: center;
     font-size: .9rem;
 
-    color: var(--font-color);
+    color: var(--bg);
 }
 
 @media screen and (max-width: 700px) {
