@@ -265,4 +265,12 @@ footer a:nth-child(3):hover {
         min-height: 200px;
         max-height: 300px;
     }
+
+    .courses-area article:hover {
+        background: var(--bg);
+        border: 1px solid var(--bg);
+        color: var(--bg-secondary);
+        cursor: pointer;
+        transform: scale(1)
+    }
 }
